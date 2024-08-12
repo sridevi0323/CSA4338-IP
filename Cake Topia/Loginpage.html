@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+<body>
+  <div style="text-align: center; padding: 20px;">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return displaySuccessMessage()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="successMessage" style="display: none; color: green; font-weight: bold;">Successfully logged in!</p>
+  </div>
+  <script>
+    function displaySuccessMessage() {
+      event.preventDefault();
+      document.getElementById("successMessage").style.display = "block";
+      return false;
+    }
+  </script>
+</body>
+</html>
